@@ -1,1 +1,9 @@
 <app-header> </app-header>
+
+<app-feeds *ngIf="isLoggedIn; else login"></app-feeds>
+
+<ng-template #login>
+  <app-login></app-login>
+</ng-template>
+
+<!-- <button (click)="isLoggedIn = true">login</button> -->
